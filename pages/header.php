@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+require '_header.php';
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -24,4 +26,4 @@
                 <p><a href = "client-connecte.html"><i class="far fa-user"></i>Se connecter</a></p>
             </div>
         </div>
-        </header>   
+        </header>
