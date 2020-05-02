@@ -25,18 +25,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `categorie`
---
-
-DROP TABLE IF EXISTS `categorie`;
-CREATE TABLE IF NOT EXISTS `categorie` (
-  `CodeCategorie` smallint(6) NOT NULL,
-  PRIMARY KEY (`CodeCategorie`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `client`
 --
 
@@ -50,11 +38,37 @@ CREATE TABLE IF NOT EXISTS `client` (
   `VilleClient` varchar(25) NOT NULL,
   `CpClient` varchar(5) NOT NULL,
   `PaysClient` varchar(25) NOT NULL,
-  `TelClient` varchar(14) NOT NULL,
-  `EmailCLient` varchar(30) NOT NULL,
-  `Mdp` varchar(20) NOT NULL,
   PRIMARY KEY (`NumClient`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `categorie`
+--
+
+DROP TABLE IF EXISTS `categorie`;
+CREATE TABLE IF NOT EXISTS `categorie` (
+  `CodeCategorie` smallint(6) NOT NULL,
+  PRIMARY KEY (`CodeCategorie`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE IF NOT EXISTS `user` (
+  `Identifiant` varchar(25) NOT NULL,
+  `EmailCLient` varchar(30) NOT NULL,
+  `Mdp` varchar(20) NOT NULL,
+  `NumClient` smallint(6) NOT NULL,
+  CONSTRAINT pk_user PRIMARY KEY (Identifiant),
+  CONSTRAINT fk_user_client FOREIGN KEY (NumClient) REFERENCES client(NumClient)
+);
+
 
 -- --------------------------------------------------------
 
