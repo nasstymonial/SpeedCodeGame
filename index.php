@@ -1,7 +1,7 @@
 <?php
     require 'pages/header.php';
 ?>
-<div id = "corps-de-page" class = "corps-de-page">
+<div id = "corps-de-page" class = "corps-de-page"> 
     <div class = "formulaire-recherche">
         <form method ="POST" action ="#">
             <div class ="recherche">

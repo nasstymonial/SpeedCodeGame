@@ -6,7 +6,7 @@ class DB{
     private $password = 'tjvbk1';
     private $database = 'speedcodegame';
     private $db;
-
+    
     public function __construct($host = null, $username = null, $password = null, $database = null){
         if($host != null){
             $this->host = $host;
