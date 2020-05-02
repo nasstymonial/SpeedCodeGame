@@ -31,15 +31,17 @@
                 <!-- IMAGE EN BACKGROUNG SUR CSS -->    
         </div>
         <div class = "meilleures-ventes">
-            <div class ="prod-MV-banniere" data-index ="0">
+            <?php $produits = $DB->query('SELECT * FROM produits WHERE CodeProd=1'); ?>
+            <?php foreach ($produits as $produit): ?>
+                <div class ="prod-MV-banniere" data-index ="0">
                 <div class = "image">
-                    <!-- IMAGE EN BACKGROUNG SUR CSS -->
+                    <span><img src="images/produits/<?= $produit->CodeProd; ?>.jpg" alt="un jeux" width="100%"></span>
                     <div class = "promotion">
                         <span>-30%</span>
                     </div>
                 </div>
                 <div class = "info-jeu">
-                    <span><a href = "#">titre du jeu et redirection vers sa page</a></span>
+                    <span><a href = "#"><?= $produit->NomProd; ?></a></span>
                     <div class = "logo-info-jeu">
                         <div class = "logo-steam">
                             <i class="fab fa-steam"></i>
@@ -50,218 +52,40 @@
                     </div>
                 </div>
                 <div class = "prix-prod">
-                    <span>prix brut</span>
-                    <span>prix avec reduc</span>
+                    <span style="text-decoration: line-through;"><?= number_format($produit->Prix,2,',',' '); ?>€</span> <br>
+                    <span><?php $pourcentage = 30; echo $produit->Prix - ($produit->Prix * ($pourcentage/100));?> €</span>
                 </div>
-            </div> 
-                <div class =" prod-MV" data-index ="0">
-                    <div class = "image">
-                        <!-- IMAGE EN BACKGROUNG SUR CSS -->
-                        <div class = "promotion">
-                            <span>-30%</span>
-                        </div>
-                    </div>
-                    <div class = "info-jeu">
-                        <span><a href = "#">titre du jeu et redirection vers sa page</a></span>
-                        <div class = "logo-info-jeu">
-                            <div class = "logo-steam">
-                                <i class="fab fa-steam"></i>
-                            </div>
-                            <div class ="logo-conn-internet">
-                                <i class="fas fa-globe"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class = "prix-prod">
-                        <span>prix brut</span>
-                        <span>prix avec reduc</span>
+            <?php endforeach; ?>
+        </div> 
+        <!-- REQUETE SQL -->
+        <?php $produits = $DB->query('SELECT * FROM produits WHERE CodeProd BETWEEN 1 AND 10'); ?>
+        <?php foreach ($produits as $produit): ?>
+            <div class =" prod-MV" data-index ="0">
+                <div class = "image">
+                    <!-- IMAGE AVEC APPELLE DE LA BDD -->
+                    <span><img src="images/produits/<?= $produit->CodeProd; ?>.jpg" alt="un jeux" width="100%"></span>
+                    <div class = "promotion">
+                        <span>-30%</span>
                     </div>
                 </div>
-                <div class =" prod-MV" data-index ="0">
-                    <div class = "image">
-                        <!-- IMAGE EN BACKGROUNG SUR CSS -->
-                        <div class = "promotion">
-                            <span>-30%</span>
+                <div class = "info-jeu">
+                    <span><a href = "#"><?= $produit->NomProd; ?></a></span>
+                    <div class = "logo-info-jeu">
+                        <div class = "logo-steam">
+                            <i class="fab fa-steam"></i>
                         </div>
-                    </div>
-                    <div class = "info-jeu">
-                        <span><a href = "#">titre du jeu et redirection vers sa page</a></span>
-                        <div class = "logo-info-jeu">
-                            <div class = "logo-steam">
-                                <i class="fab fa-steam"></i>
-                            </div>
-                            <div class ="logo-conn-internet">
-                                <i class="fas fa-globe"></i>
-                            </div>
+                        <div class ="logo-conn-internet">
+                            <i class="fas fa-globe"></i>
                         </div>
-                    </div>
-                    <div class = "prix-prod">
-                        <span>prix brut</span>
-                        <span>prix avec reduc</span>
                     </div>
                 </div>
-                <div class =" prod-MV" data-index ="0">
-                    <div class = "image">
-                        <!-- IMAGE EN BACKGROUNG SUR CSS -->
-                        <div class = "promotion">
-                            <span>-30%</span>
-                        </div>
-                    </div>
-                    <div class = "info-jeu">
-                        <span><a href = "#">titre du jeu et redirection vers sa page</a></span>
-                        <div class = "logo-info-jeu">
-                            <div class = "logo-steam">
-                                <i class="fab fa-steam"></i>
-                            </div>
-                            <div class ="logo-conn-internet">
-                                <i class="fas fa-globe"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class = "prix-prod">
-                        <span>prix brut</span>
-                        <span>prix avec reduc</span>
-                    </div>
-                </div>
-                <div class =" prod-MV" data-index ="0">
-                    <div class = "image">
-                        <!-- IMAGE EN BACKGROUNG SUR CSS -->
-                        <div class = "promotion">
-                            <span>-30%</span>
-                        </div>
-                    </div>
-                    <div class = "info-jeu">
-                        <span><a href = "#">titre du jeu et redirection vers sa page</a></span>
-                        <div class = "logo-info-jeu">
-                            <div class = "logo-steam">
-                                <i class="fab fa-steam"></i>
-                            </div>
-                            <div class ="logo-conn-internet">
-                                <i class="fas fa-globe"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class = "prix-prod">
-                        <span>prix brut</span>
-                        <span>prix avec reduc</span>
-                    </div>
-                </div>
-                <div class =" prod-MV" data-index ="0">
-                    <div class = "image">
-                        <!-- IMAGE EN BACKGROUNG SUR CSS -->
-                        <div class = "promotion">
-                            <span>-30%</span>
-                        </div>
-                    </div>
-                    <div class = "info-jeu">
-                        <span><a href = "#">titre du jeu et redirection vers sa page</a></span>
-                        <div class = "logo-info-jeu">
-                            <div class = "logo-steam">
-                                <i class="fab fa-steam"></i>
-                            </div>
-                            <div class ="logo-conn-internet">
-                                <i class="fas fa-globe"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class = "prix-prod">
-                        <span>prix brut</span>
-                        <span>prix avec reduc</span>
-                    </div>
-                </div>
-                <div class =" prod-MV" data-index ="0">
-                    <div class = "image">
-                        <!-- IMAGE EN BACKGROUNG SUR CSS -->
-                        <div class = "promotion">
-                            <span>-30%</span>
-                        </div>
-                    </div>
-                    <div class = "info-jeu">
-                        <span><a href = "#">titre du jeu et redirection vers sa page</a></span>
-                        <div class = "logo-info-jeu">
-                            <div class = "logo-steam">
-                                <i class="fab fa-steam"></i>
-                            </div>
-                            <div class ="logo-conn-internet">
-                                <i class="fas fa-globe"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class = "prix-prod">
-                        <span>prix brut</span>
-                        <span>prix avec reduc</span>
-                    </div>
-                </div>
-                <div class =" prod-MV" data-index ="0">
-                    <div class = "image">
-                        <!-- IMAGE EN BACKGROUNG SUR CSS -->
-                        <div class = "promotion">
-                            <span>-30%</span>
-                        </div>
-                    </div>
-                    <div class = "info-jeu">
-                        <span><a href = "#">titre du jeu et redirection vers sa page</a></span>
-                        <div class = "logo-info-jeu">
-                            <div class = "logo-steam">
-                                <i class="fab fa-steam"></i>
-                            </div>
-                            <div class ="logo-conn-internet">
-                                <i class="fas fa-globe"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class = "prix-prod">
-                        <span>prix brut</span>
-                        <span>prix avec reduc</span>
-                    </div>
-                </div>
-                <div class =" prod-MV" data-index ="0">
-                    <div class = "image">
-                        <!-- IMAGE EN BACKGROUNG SUR CSS -->
-                        <div class = "promotion">
-                            <span>-30%</span>
-                        </div>
-                    </div>
-                    <div class = "info-jeu">
-                        <span><a href = "#">titre du jeu et redirection vers sa page</a></span>
-                        <div class = "logo-info-jeu">
-                            <div class = "logo-steam">
-                                <i class="fab fa-steam"></i>
-                            </div>
-                            <div class ="logo-conn-internet">
-                                <i class="fas fa-globe"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class = "prix-prod">
-                        <span>prix brut</span>
-                        <span>prix avec reduc</span>
-                    </div>
-                </div>
-                <div class =" prod-MV" data-index ="0">
-                    <div class = "image">
-                        <!-- IMAGE EN BACKGROUNG SUR CSS -->
-                        <div class = "promotion">
-                            <span>-30%</span>
-                        </div>
-                    </div>
-                    <div class = "info-jeu">
-                        <span><a href = "#">titre du jeu et redirection vers sa page</a></span>
-                        <div class = "logo-info-jeu">
-                            <div class = "logo-steam">
-                                <i class="fab fa-steam"></i>
-                            </div>
-                            <div class ="logo-conn-internet">
-                                <i class="fas fa-globe"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class = "prix-prod">
-                        <span>prix brut</span>
-                        <span>prix avec reduc</span>
-                    </div>
+                <div class = "prix-prod">
+                    <span style="text-decoration: line-through;"><?= number_format($produit->Prix,2,',',' '); ?>€</span> <br>
+                    <span><?php $pourcentage = 30; echo $produit->Prix - ($produit->Prix * ($pourcentage/100));?> €</span>
                 </div>
             </div>
+        <?php endforeach; ?>
+        </div>
         <div class = "precommandes">
             <span>PRECOMMANDES</span>
             <!-- REQUETE SQL -->
