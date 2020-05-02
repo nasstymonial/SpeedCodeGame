@@ -31,7 +31,8 @@
                 <!-- IMAGE EN BACKGROUNG SUR CSS -->    
         </div>
         <div class = "meilleures-ventes">
-            <?php $produits = $DB->query('SELECT * FROM produits WHERE CodeProd=1'); ?>
+            <!-- REQUETE SQL -->
+            <?php $produits = $DB->query('SELECT * FROM produits WHERE CodeProd=6'); ?>
             <?php foreach ($produits as $produit): ?>
                 <div class ="prod-MV-banniere" data-index ="0">
                 <div class = "image">
@@ -89,7 +90,7 @@
         <div class = "precommandes">
             <span>PRECOMMANDES</span>
             <!-- REQUETE SQL -->
-            <?php $produits = $DB->query('SELECT * FROM produits WHERE CodeProd BETWEEN 1 AND 2'); ?>
+            <?php $produits = $DB->query('SELECT * FROM produits WHERE CodeProd BETWEEN 1 AND 20'); ?>
             <?php foreach ($produits as $produit): ?>
                 <div class = "jeu-preco">
                     <div>
