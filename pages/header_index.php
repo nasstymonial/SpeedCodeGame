@@ -28,9 +28,9 @@ if(session_status() == PHP_SESSION_NONE){
             </div>
             <div class = " connecter">
                 <?php if(isset($_SESSION['auth'])) : ?>
-                    <p><a href="deconnexion.php" >Se déconnecter</a></p>
+                    <p><a href="pages/deconnexion.php" >Se déconnecter</a></p>
                 <?php else: ?>
-                    <p><a href = "connexion.php"><i class="far fa-user"></i>Se connecter</a></p>
+                    <p><a href = "pages/connexion.php"><i class="far fa-user"></i>Se connecter</a></p>
                 <?php endif; ?>
             </div>
         </div>

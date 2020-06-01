@@ -1,5 +1,5 @@
 <?php
-    require 'pages/header.php';
+    require 'pages/header_index.php';
 ?>
 <div id = "corps-de-page" class = "corps-de-page"> 
     <div class = "formulaire-recherche">
