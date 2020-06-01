@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3308
--- Généré le :  sam. 02 mai 2020 à 22:40
--- Version du serveur :  8.0.18
--- Version de PHP :  7.3.12
+-- Généré le :  lun. 01 juin 2020 à 17:17
+-- Version du serveur :  5.7.28
+-- Version de PHP :  7.4.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -123,18 +123,24 @@ INSERT INTO `produits` (`CodeProd`, `NomProd`, `DescProd`, `CodeCategorie`, `Pri
 -- --------------------------------------------------------
 
 --
--- Structure de la table `user`
+-- Structure de la table `users`
 --
 
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE IF NOT EXISTS `user` (
-  `Identifiant` varchar(25) NOT NULL,
-  `EmailCLient` varchar(30) NOT NULL,
-  `Mdp` varchar(20) NOT NULL,
-  `NumClient` smallint(6) NOT NULL,
-  PRIMARY KEY (`Identifiant`),
-  KEY `fk_user_client` (`NumClient`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `motdepasse` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `email`, `motdepasse`) VALUES
+(1, 'Foo', 'foo@gmail.com', '$2y$10$SYr1U.rCVl0JVEdjzWs9zu3NYzLSxDY8erYOdmlw5M/8c5AlFW0ne');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
