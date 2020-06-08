@@ -36,13 +36,13 @@
             <?php foreach ($produits as $produit): ?>
                 <div class ="prod-MV-banniere" data-index ="0">
                 <div class = "image">
-                    <span><img src="images/produits/<?= $produit->CodeProd; ?>.jpg" alt="un jeux" width="100%"></span>
+                    <span><a href="pages/produit.php?CodeProd=<?=$produit->CodeProd;?>"><img src="images/produits/<?= $produit->CodeProd; ?>.jpg" alt="un jeux" width="100%"></a></span>
                     <div class = "promotion">
                         <span>-30%</span>
                     </div>
                 </div>
                 <div class = "info-jeu">
-                    <span><a href = "#"><?= $produit->NomProd; ?></a></span>
+                    <span><a href="pages/produit.php?CodeProd=<?=$produit->CodeProd;?>"><?= $produit->NomProd; ?></a></span>
                     <div class = "logo-info-jeu">
                         <div class = "logo-steam">
                             <i class="fab fa-steam"></i>
@@ -64,13 +64,13 @@
             <div class =" prod-MV" data-index ="0">
                 <div class = "image">
                     <!-- IMAGE AVEC APPELLE DE LA BDD -->
-                    <span><img src="images/produits/<?= $produit->CodeProd; ?>.jpg" alt="un jeux" width="100%"></span>
+                    <span><a href="pages/produit.php?CodeProd=<?=$produit->CodeProd;?>"><img src="images/produits/<?= $produit->CodeProd; ?>.jpg" alt="un jeux" width="100%"></a></span>
                     <div class = "promotion">
                         <span>-30%</span>
                     </div>
                 </div>
                 <div class = "info-jeu">
-                    <span><a href = "#"><?= $produit->NomProd; ?></a></span>
+                    <span><a href="pages/produit.php?CodeProd=<?=$produit->CodeProd;?>"><?= $produit->NomProd; ?></a></span>
                     <div class = "logo-info-jeu">
                         <div class = "logo-steam">
                             <i class="fab fa-steam"></i>
@@ -100,10 +100,10 @@
                     </div>
                     <div class = "image-jeu-preco">
                         <!-- IMAGE AVEC APPELLE DE LA BDD -->
-                        <span><img src="images/produits/<?= $produit->CodeProd; ?>.jpg" alt="un jeux" width="100%"></span>
+                        <span><a href="pages/produit.php?CodeProd=<?=$produit->CodeProd;?>"><img src="images/produits/<?= $produit->CodeProd; ?>.jpg" alt="un jeux" width="100%"></a></span>
                     </div>
                     <div class ="info-jeu-preco">
-                        <h3><?= $produit->NomProd; ?></h3>
+                        <a href="pages/produit.php?CodeProd=<?=$produit->CodeProd;?>"><h3><?= $produit->NomProd; ?></h3></a>
                         <div class = "logo-steam-preco">
                             <i class="fab fa-steam"></i>
                         </div>
