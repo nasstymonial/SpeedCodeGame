@@ -13,6 +13,7 @@ header
     display: flex;
     justify-content:  space-around;
     flex-direction: row;
+    
 }
 
 header a 
@@ -123,9 +124,9 @@ header i
     height: auto;
     width: auto;
     align-content: flex-end;
-    padding: 20px 20px 20px 20px;
 }
 /* BODY */
+
 body
 {
     height: 3705px;
@@ -141,6 +142,7 @@ body
     justify-content: center;
     align-items: center;
 }
+
 .formulaire-recherche
 {
     display: flex;
@@ -204,9 +206,9 @@ select
 
 .produit
 {
-    height: 3500px;
-    width: 1110px;
-    display: flex;
+    padding-left: 5%;
+    height: 100%;
+    width: 100%;
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
@@ -214,59 +216,120 @@ select
 
 .meilleures-ventes
 {
-    height: 1409px;
-    width: 1110px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+.prix-prod
+{
+    display : inline-block;
+    padding-left: 5%;
+    width: 30%;
+}
+
+.logo-steam
+{
+    display : inline-block;
+    width: auto;
+    height: auto;
+}
+
+.logo-info-jeu
+{
+    width: auto;
+}
+
+.info-jeu
+{
+    display : inline-block;
+    padding-left: 5%;
+    padding-top: 2%;
+    width: auto;
+    height: 15%;
+    width: 100%;
+
+}
+
+.nom-produit
+{
+    font-size: 18px;
+    text-transform: uppercase;
+
+}
+
+.logo-conn-internet
+{
+    display : inline-block;
+    padding-left: 5%;
+    width: auto;
+    height: 15%;
 }
 
 .prod-MV-banniere
 {
-    height: 680px;
-    width: 730px;
+    height: 35%;
+    width: 100%;
     border-radius: 15px 15px 15px 15px;
     background-color: white;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+.promotion
+{
+    display: inline-block;
+    padding-left: 5%;
+}
+
+.promotion-ban
+{
+    display: inline-block;
+    padding-left: 1%;
 }
 
 .prod-MV
 {
-    height: 330px;
-    width: 190px;
-    background-color: white;
-    border-radius: 15px 15px 15px 15px; 
+    height: 255px;
+    width: 20%;
+    display: inline-block;
+    margin-top: 2%;
+    padding-left: 3.5%;
 }
 
 .precommandes
 {
-    width: 1110px;
-    height: 3306px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    width: 100%;
+    height: 2%;
+    display: inline-block;
+    padding-top: 2%;
+    margin-top: 2%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 48px;
 }
 
 .jeu-preco
 {
-    width: 1110px;
-    height: 105px;
+    width: 60%;
+    height: 100%;
+    padding-bottom: 2%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     border-radius: 15px 15px 15px 15px;
-    background-color: white;
+    align-items: center;
+    margin-left: 5%;
+    margin-top: 3%;
 }
 
 .date-sortie
 {
+    margin-top: 5%;
     height: 100px;
     writing-mode: sideways-lr;
     text-align: center;
     font-weight: bold;
     border-radius: 15px 15px 15px 15px;
+    font-size: 24px;
+    text-transform: capitalize;
 }
 
 .image-jeu-preco
@@ -276,25 +339,37 @@ select
 .info-jeu-preco
 {
     display: flex;
-    flex-direction: row;
     align-items: center;
+    padding-left: 1%;
+    justify-content: space-between;
+    height: 5%;
+    font-size: 24px;
 }
 .logo-steam-preco
 {
-    width: 20px;
-    height: 20px;
+    width: 2%;
+    height: 2%;
+    padding-left: 5%;
 }
+
 .logo-monde-preco
 {
-    width: 20px;
-    height: 20px;
+    width: 2%;
+    height: 2%;
+    padding-left: 5%;
 }
+
 .prix-jeu-preco
 {
-    width: 100px;
-    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    width: 2%;
+    height: 2%;
+    padding-left: 5%;
 }
+
 /* FOOTER */
+
 footer
 {
     background-color: #ea732b;
@@ -445,7 +520,6 @@ footer section
 
 .block-4
 {
-
     margin: 0px;
     padding: 0px;
     display: flex;

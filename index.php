@@ -1,3 +1,4 @@
+
 <?php
     require 'pages/header_index.php';
 ?>
@@ -32,12 +33,16 @@
         </div>
         <div class = "meilleures-ventes">
             <!-- REQUETE SQL -->
+
             <?php $produits = $DB->query('SELECT * FROM produits WHERE CodeProd=6'); ?>
+
             <?php foreach ($produits as $produit): ?>
                 <div class ="prod-MV-banniere" data-index ="0">
                 <div class = "image">
                     <span><a href="pages/produit.php?CodeProd=<?=$produit->CodeProd;?>"><img src="images/produits/<?= $produit->CodeProd; ?>.jpg" alt="un jeux" width="100%"></a></span>
-                    <div class = "promotion">
+
+                    <div class = "promotion-ban">
+
                         <span>-30%</span>
                     </div>
                 </div>
@@ -54,15 +59,18 @@
                 </div>
                 <div class = "prix-prod">
                     <span style="text-decoration: line-through;"><?= number_format($produit->Prix,2,',',' '); ?>€</span> <br>
-                    <span><?php $pourcentage = 30; echo $produit->Prix - ($produit->Prix * ($pourcentage/100));?> €</span>
+                    <span class="text-deco"><?php $pourcentage = 30; echo $produit->Prix - ($produit->Prix * ($pourcentage/100));?> €</span>
                 </div>
             <?php endforeach; ?>
         </div> 
+
         <!-- REQUETE SQL -->
         <?php $produits = $DB->query('SELECT * FROM produits WHERE CodeProd BETWEEN 1 AND 10'); ?>
+
         <?php foreach ($produits as $produit): ?>
+
             <div class =" prod-MV" data-index ="0">
-                <div class = "image">
+                <div class = "produit-image">
                     <!-- IMAGE AVEC APPELLE DE LA BDD -->
                     <span><a href="pages/produit.php?CodeProd=<?=$produit->CodeProd;?>"><img src="images/produits/<?= $produit->CodeProd; ?>.jpg" alt="un jeux" width="100%"></a></span>
                     <div class = "promotion">
@@ -70,7 +78,9 @@
                     </div>
                 </div>
                 <div class = "info-jeu">
-                    <span><a href="pages/produit.php?CodeProd=<?=$produit->CodeProd;?>"><?= $produit->NomProd; ?></a></span>
+
+                    <span class="nom-produit"><a href="pages/produit.php?CodeProd=<?=$produit->CodeProd;?>"><?= $produit->NomProd; ?></a></span>
+
                     <div class = "logo-info-jeu">
                         <div class = "logo-steam">
                             <i class="fab fa-steam"></i>
@@ -85,13 +95,18 @@
                     <span><?php $pourcentage = 30; echo $produit->Prix - ($produit->Prix * ($pourcentage/100));?> €</span>
                 </div>
             </div>
+
         <?php endforeach; ?>
+
         </div>
         <div class = "precommandes">
             <span>PRECOMMANDES</span>
             <!-- REQUETE SQL -->
+
             <?php $produits = $DB->query('SELECT * FROM produits WHERE CodeProd BETWEEN 1 AND 20'); ?>
+
             <?php foreach ($produits as $produit): ?>
+
                 <div class = "jeu-preco">
                     <div>
                         <div class = "date-sortie">
@@ -116,7 +131,9 @@
                     </div>
                 </div>
             <?php endforeach; ?>
+
         </div>
     </div>
 </div>
+
 <?php require 'pages/footer.php'; ?>
