@@ -40,7 +40,9 @@
                 <div class ="prod-MV-banniere" data-index ="0">
                 <div class = "image">
                     <span><a href="pages/produit.php?CodeProd=<?=$produit->CodeProd;?>"><img src="images/produits/<?= $produit->CodeProd; ?>.jpg" alt="un jeux" width="100%"></a></span>
+
                     <div class = "promotion-ban">
+
                         <span>-30%</span>
                     </div>
                 </div>
@@ -76,7 +78,9 @@
                     </div>
                 </div>
                 <div class = "info-jeu">
+
                     <span class="nom-produit"><a href="pages/produit.php?CodeProd=<?=$produit->CodeProd;?>"><?= $produit->NomProd; ?></a></span>
+
                     <div class = "logo-info-jeu">
                         <div class = "logo-steam">
                             <i class="fab fa-steam"></i>
