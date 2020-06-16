@@ -21,15 +21,15 @@
 
                     <div class="logo-general">
                         <div class="logo">
-                            <img src="steam.png">
+                            <img src="../images/logos/steam.png">
                         </div>
 
                         <div class="logo">
-                            <img src="logo1.png">
+                            <img src="../images/logos/logo1.png">
                         </div>
 
                         <div class="logo">
-                            <img src="logo2.png">
+                            <img src="../images/logos/logo2.png">
                         </div>
 
                     </div>
@@ -59,13 +59,13 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="carousel1.jpg" class="d-block w-100" alt="...">
+                        <img src="../images/carousel1/<?= $produit->CodeProd; ?>.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="carousel2.jpg" class="d-block w-100" alt="...">
+                        <img src="../images/carousel2/<?= $produit->CodeProd; ?>.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="carousel3.jpg" class="d-block w-100" alt="...">
+                        <img src="../images/carousel3/<?= $produit->CodeProd; ?>.jpg" class="d-block w-100" alt="...">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -138,7 +138,7 @@
                 <p>Works great and fast, no complaints <span class="prix1"></span></p>
             </div>
         </div>
-
+        
         <div class="produitsRecommander">
             <p><span class="titreProduit">Liste des produits recommandés</span></p>
                 <div class="card">
