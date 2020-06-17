@@ -361,86 +361,6 @@ select
     height: 2%;
     padding-left: 5%;
 }
-.form-group
-{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 3%;
-}
-
-.form-connexion
-{
-    width: 40%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    padding-bottom: 3%;
-    margin-left: 30%;
-}
-
-form
-{
-    width: 40%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    padding-bottom: 3%;
-    margin-left: 30%;
-}
-h1
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-top: 5%;
-    padding-bottom: 2%;
-
-}
-
-.label-connexion 
-{
-    padding-top: 1%;
-    padding-bottom: 3%;
-}
-
-.input-connexion 
-{
-    height: 100%;
-    width: 75%;
-    margin-bottom: 3%;
-    padding-bottom: 5%;
-}
-
-.a-connexion
-{
-    padding-top: 0%;
-    font-size: 150%;
-}
-
-.submit-connexion
-{
-    height: 70px;
-    width: 200px;
-    margin-block: 2%;
-}
-a
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-top: 2%;
-    padding-bottom: 2%;
-}
-
 .form-inscription
 {
     height: 15%;
@@ -451,24 +371,27 @@ a
 {
     width: 80%;
     display: flex;
-    height: 13%;
+    height: 20%;
     margin-bottom: 2%;
-    align-items: baseline;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .label-group-inscription
 {
     height: 100%;
-    width: 34%;
+    width: 50%;
     justify-content: center;
     display: flex;
     align-items: center;
+    font-size: 130%;
 }
 
 .input-group-inscription
 {
     width: 50%;
-    height: 50%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -476,7 +399,6 @@ a
 
 .submit-inscription
 {
-    margin-left: 16%;
     width: 41%;
 }
 
