@@ -56,27 +56,27 @@ if(!empty($_POST)){
         </ul>
     </div>
 <?php endif; ?>
-<form action="" method="post">
-    <div class="form-group">
-        <label for="">Pseudo</label>
-        <input type="text" name="username" required />
+<form class="form-inscription" action="" method="post">
+    <div class="form-group-inscription">
+        <label class ="label-group-inscription"for="">Pseudo</label>
+        <input class ="input-group-inscription"type="text" name="username" required />
     </div>
 
-    <div class="form-group">
-        <label for="">Email</label>
-        <input type="email" name="email" required />
+    <div class="form-group-inscription">
+        <label class ="label-group-inscription"for="">Email</label>
+        <input class ="input-group-inscription"type="email" name="email" required />
     </div>
 
-    <div class="form-group">
-        <label for="">Mot de passe</label>
-        <input type="password" name="motdepasse" required />
+    <div class="form-group-inscription">
+        <label class ="label-group-inscription"for="">Mot de passe</label>
+        <input class ="input-group-inscription"type="password" name="motdepasse" required />
     </div>
 
-    <div class="form-group">
-        <label for="">Confirmer le mot de passe</label>
-        <input type="password" name="motdepasse_confirm" required />
+    <div class="form-group-inscription">
+        <label class ="label-group-inscription"for="">Confirmer le mot de passe</label>
+        <input class ="input-group-inscription"type="password" name="motdepasse_confirm" required />
     </div>
 
 
-    <button type="submit">M'inscrire</button>
+    <button class ="submit-inscription" type="submit">M'inscrire</button>
 </form>
