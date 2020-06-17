@@ -17,18 +17,20 @@ if(!empty($_POST) && !empty($_POST['username'] && !empty($_POST['motdepasse'])))
 
 <h1>Se connecter</h1>
 
-<form action="" method="post">
-    <div class="form-group">
-        <label for="">Pseudo ou email </label>
-        <input type="text" name="username" required />
-    </div>
+<div class="formulaire_connexion">
+    <form class="form-connexion"action="" method="post">
+        <div class="form-group">
+            <label class="label-connexion" for="">Pseudo ou email </label>
+            <input class="input-connexion" type="text" name="username" required />
+        </div>
 
-    <div class="form-group">
-        <label for="">Mot de passe</label>
-        <input type="password" name="motdepasse" required />
-    </div>
+        <div class="form-group">
+            <label class="label-connexion" for="">Mot de passe</label>
+            <input class="input-connexion" type="password" name="motdepasse" required />
+        </div>
 
-    <button type="submit">Se connecter</button>
-</form>
+        <button class="submit-connexion" type="submit">Se connecter</button>
+    </form>
+</div>
 
-<a href="inscription.php">Pas encore inscrit ? Cliquez ici</a>
+<a class="a-connexion" href="inscription.php">Pas encore inscrit ? Cliquez ici</a>
