@@ -1,4 +1,3 @@
-
 <?php
     require 'pages/header_index.php';
 ?>
@@ -127,6 +126,9 @@
                         </div>
                         <div class = " prix-jeu-preco">
                             <span><?= number_format($produit->Prix,2,',',' '); ?>€</span>
+                        </div>
+                        <div class="ajout panier">
+                            <a href="pages/addpanier.php?CodeProd=<?= $produit->CodeProd; ?>" class="add addPanier">Ajouter au panier</a>
                         </div>
                     </div>
                 </div>

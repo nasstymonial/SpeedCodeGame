@@ -12,7 +12,6 @@ if(session_status() == PHP_SESSION_NONE){
     <script src="https://kit.fontawesome.com/1bf014a2d4.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js%22%3E"></script> 
     <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
     <header>
@@ -24,7 +23,17 @@ if(session_status() == PHP_SESSION_NONE){
         </div>
         <div class = "panierEtConnection">
             <div class = "panier">
-                <a class = "a-panier" href = "#"> <i class="fas fa-cart-arrow-down"></i></a>
+                <a class = "a-panier" href = "panier.php"> <i class="fas fa-cart-arrow-down"></i></a>
+                <ul class="cart">
+                    <li class="items">
+                        <p>Article(s)</p>
+                        <span id="count"><?= $panier->count(); ?></span>
+                    </li>
+                    <li class="total">
+                        <p>TOTAL</p>
+                        <span id="total"><?= number_format($panier->total(),2,',',' '); ?> €</span>
+                    </li>
+                </ul>
             </div>
             <div class = " connecter">
                 <?php if(isset($_SESSION['auth'])) : ?>
