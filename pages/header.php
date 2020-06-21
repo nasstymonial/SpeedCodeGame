@@ -31,7 +31,7 @@ if(session_status() == PHP_SESSION_NONE){
                     </li>
                     <li class="total">
                         <p>TOTAL</p>
-                        <span id="total"><?= number_format($panier->total(),2,',',' '); ?> €</span>
+                        <span id="total"><?= $panier->total(); ?> €</span>
                     </li>
                 </ul>
             </div>
