@@ -1,0 +1,193 @@
+body
+{
+    height: 1334px;
+    width: 1650px;
+    background-color: #f2f2f2;
+}
+.corps-de-page
+{
+    height: 1330px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bloc-navbar
+{
+    height: 85px;
+    width: 1110px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:last baseline;
+}
+
+.navbar
+{
+    background-color: white;
+    height: 50px;
+    width: 1010px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: stretch;
+    margin: unset;
+    padding-inline: none;
+    border-radius: 35px 35px 35px 35px;
+}
+.option
+{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+}
+
+
+#tableau
+{
+    width: 158px;
+}
+
+#Inventaire
+{
+    width: 117px;
+}
+
+#a-Compte
+{
+    color : white;
+}
+#Service
+{
+    width: 143px;
+}
+
+#Commentaires
+{
+    width: 150px;
+}
+
+#offres
+{
+    width: 129px;
+}
+#affiliation
+{
+    width: 197px;
+}
+#Compte
+{
+    width: 115.5px;
+    background-color: #fb8e31;
+    border-radius: 35px 35px 35px 35px;
+}
+
+.a-option
+{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px 30px 30px 30px;
+    color: black;
+    text-decoration: none;
+
+    margin: none;
+    padding: unset;
+}
+.a-option:hover
+{
+    background-color: #fb8e31;
+    color: white;
+}
+
+#bloc-navbar-compte
+{
+    width: 500px;
+}
+
+#operations
+{
+background-color: #fb8e31;
+border-radius: 35px 35px 35px 35px;
+}
+
+#a-operations
+{
+    color: white;
+}
+
+.bloc-bas
+{
+    border: 2px black solid;
+    width: 1140px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.informations
+{
+    border: 2px yellow solid;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.menu-information
+{
+    background-color: #e9e7e7;
+    opacity: 2;
+    height: 100%;
+    width: 230px;
+    margin: 0px;
+    padding: 0px;
+}
+
+ ul, li
+{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu-vertical
+{
+    border: 2px red solid;
+    height: 50%;
+    width: 230px;
+    margin-top: 62px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-perso
+{
+    border: 2px yellow solid;
+    height: 41px;
+    width: 230px;
+}
+
+.detail-info-perso
+{
+    
+    height: 180px;
+    width: 150px;
+}
+.li-detail
+{
+    height: 30px;
+    width: 150px;
+}
+.li-histo, .li-accords
+{
+    height: 30px;
+    width: 230px;
+    border: 2px blue solid;
+}
