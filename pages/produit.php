@@ -50,32 +50,34 @@
             </div> 
         
         <div class="conteneur-image">
+            <!-- The expanding image container -->
             
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="../images/carousel1/<?= $produit->CodeProd; ?>.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../images/carousel2/<?= $produit->CodeProd; ?>.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../images/carousel3/<?= $produit->CodeProd; ?>.jpg" class="d-block w-100" alt="...">
-                    </div>
+            <div class="container">
+                <!-- Close the image -->
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                
+                <!-- Expanded image -->
+                <img id="expandedImg" style="width:100%">
+                
+                <!-- Image text -->
+                <div id="imgtext"></div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <img src="../images/carousel1/<?= $produit->CodeProd; ?>.jpg"  alt="Nature" onclick="myFunction(this);">
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+
+                <div class="column">
+                    <img src="../images/carousel2/<?= $produit->CodeProd; ?>.jpg"  onclick="myFunction(this);">
+                </div>
+
+                <div class="column">
+                    <img src="../images/carousel3/<?= $produit->CodeProd; ?>.jpg"  alt="Mountains" onclick="myFunction(this);">
+                </div>
+
+                <div class="column">
+                    <img src="../images/carousel4/<?= $produit->CodeProd; ?>.jpg"  alt="Lights" onclick="myFunction(this);">
+                </div>   
             </div>
         </div>
 </section>
@@ -138,22 +140,6 @@
                 <p>Works great and fast, no complaints <span class="prix1"></span></p>
             </div>
         </div>
-        
-        <div class="produitsRecommander">
-            <p><span class="titreProduit">Liste des produits recommandés</span></p>
-                <div class="card">
-                    <img src="ffback.jpg" class="cardProduit" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Final fantasy X-X2</h5>
-                      <p class="card-text">Steam CD KEY</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">Icones Steam, kinguin, epic games</li>
-                      <li class="list-group-item">29€</li>
-                    </ul>
-              </div>
-        </div>
-
 <?php
 
     endforeach;
