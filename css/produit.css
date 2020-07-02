@@ -1,0 +1,107 @@
+
+h1{
+    margin-left : 10%;
+    margin-top: 10%;
+    margin-bottom: 2%;
+    color : rgba(255, 255, 255, 1);
+}
+
+.section_principale{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    margin-bottom: 5%;
+}
+
+#carouselExampleIndicators{
+    width: 50%;
+    height: auto;
+}
+
+.conteneurpanier{
+    width:30%;
+    margin: auto;
+    min-height:435px;
+    background : rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+}
+
+.logo-general, .vendeur, .conteneurOffres, .acheter, .imagepanier, .conteneurpanier h2{
+    margin-bottom: 10px;
+}
+
+.imagepanier{
+    width: 100%;
+}
+
+.imagepanier img{
+    width: 100%;
+}
+
+.conteneurpanier h2{
+    color : rgba(0, 0, 0, 1);
+    font-size: 25px;
+}
+
+.conteneurOffres, .vendeur, .conteneurpanier h2{
+    text-align: center;
+}
+
+.logo-general{
+    display:flex; 
+    justify-content: space-around;   
+}
+
+.btn_achat{
+    display: block;
+    width: 70%;
+    margin: auto;
+    height:40px;
+    font-size : 20px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: #28A745;
+    color : rgba(255, 255, 255, 1);
+    font-weight: bold;
+}
+
+.btn_achat:hover{
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+    background: #1d7e34;
+}
+
+.details{
+    width: 80%;
+    margin: auto;
+}
+
+.details h3, .details p{
+    color: rgba(255, 255, 255, 1);
+    text-align: justify;
+}
+
+.details p{
+    margin-bottom: 40px;
+}
+
+@media  (max-width: 480px) {
+  
+    .section_principale{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #carouselExampleIndicators{
+        margin-bottom: 20px;
+    }
+
+    #carouselExampleIndicators, .conteneurpanier{
+        width: 100%;
+    }
+
+
+
+  }
