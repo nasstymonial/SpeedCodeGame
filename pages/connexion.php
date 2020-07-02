@@ -4,9 +4,9 @@ if(!empty($_POST) && !empty($_POST['username'] && !empty($_POST['motdepasse'])))
 	require_once '../inc/db.php'; 
     $req = $pdo->prepare('SELECT * FROM users WHERE username = :username OR email = :username'); 
     $req->execute(['username' => $_POST['username']]); 
-    $user = $req->fetch(); 
-    if(($user = $req->fetch(PDO::FETCH_OBJ)) && (password_verify($_POST['motdepasse'], $user->motdepasse)){
-		session_start(); 
+	$user = $req->fetch(); 
+	
+    if($user != false && password_verify($_POST['motdepasse'], $user->motdepasse)){
         $_SESSION['auth'] = $user; 
         header('Location: compte.php'); 
         exit(); 

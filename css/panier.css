@@ -1,0 +1,17 @@
+.produits {
+	background-color: #fff; 
+	border-radius: 10px; 
+	margin-bottom: 2%;
+}
+.produits h2 {
+	padding: 1%;
+}
+.produit td {
+	text-align: center;
+}
+h4 {
+    color: #fff;
+}
+.container {
+    margin-top: 15%;
+}

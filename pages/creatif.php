@@ -16,7 +16,7 @@
 
                 <br>
 
-                <a href="addpanier.php?CodeProd=<?= $produit->CodeProd; ?>" class="btn btn-success">
+                <a href="addpanier.php?CodeProd=<?= $produit->CodeProd; ?>" class="btn btn-success" id="addPanier">
                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M8.5 5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 .5-.5z"/>
                         <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0v-2z"/>
@@ -69,7 +69,7 @@
                                 <span class="text-deco"><?php $pourcentage = 30; echo $produit->Prix - ($produit->Prix * ($pourcentage/100));?> €</span>
                                 <br>
         
-                                <a href="addpanier.php?CodeProd=<?= $produit->CodeProd; ?>" class="btn btn-success">
+                                <a href="addpanier.php?CodeProd=<?= $produit->CodeProd; ?>" class="btn btn-success" id="addPanier">
                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" d="M8.5 5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 .5-.5z"/>
                                         <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0v-2z"/>
@@ -99,7 +99,7 @@
                     <div class="card-body">
                         <a href="produit.php?CodeProd=<?=$produit->CodeProd;?>"><h3 class="card-title"><?= $produit->NomProd; ?></h3></a>
                         <span class="card-text"><?= number_format($produit->Prix,2,',',' '); ?>€</span> <br>
-                        <a href="addpanier.php?CodeProd=<?= $produit->CodeProd; ?>" class="btn btn-success">Ajouter au panier</a>
+                        <a href="addpanier.php?CodeProd=<?= $produit->CodeProd; ?>" class="btn btn-success" id="addPanier">Ajouter au panier</a>
                     </div>
                 </div>
             </div>
