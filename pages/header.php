@@ -30,7 +30,8 @@ if(session_status() == PHP_SESSION_NONE){
                 <ul class="nav justify-content-end">
                     <li class="nav-item">
                         <?php if(isset($_SESSION['auth'])) : ?>
-                            <a class="nav-link my-2 my-sm-0 mr-2" href="deconnexion.php" >Se déconnecter</a>
+                            <a class="nav-link my-2 my-sm-0 mr-2" href="deconnexion.php" >Se déconnecter</a></li>
+                            <a class="nav-link my-2 my-sm-0 mr-2" href="compte.php">Mon compte</a></li>
                         <?php else: ?>
                             <a class="nav-link my-2 my-sm-0 mr-2" href="connexion.php">
                                 <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-person" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
