@@ -38,7 +38,8 @@ if(!empty($_POST)){
         $req = $pdo->prepare("INSERT INTO users SET username = ?, motdepasse = ?, email = ?");
         $motdepasse = password_hash($_POST['motdepasse'], PASSWORD_BCRYPT); 
         $req->execute([$_POST['username'], $motdepasse, $_POST['email']]);
-        die('Votre compte a bien été crée');   
+        echo 'Votre compte a bien été crée';
+        header('location: connexion.php');   
     }
 
     //debug($errors); 
