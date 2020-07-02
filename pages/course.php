@@ -1,5 +1,5 @@
 <?php
-    require 'pages/header_index.php';
+    require 'header.php';
 ?>
 <div id = "corps-de-page" class = "corps-de-page"> 
 
@@ -9,14 +9,14 @@
 
     <?php foreach ($produits as $produit): ?>
         <div class ="card w-100 bg-dark text-white vedette">
-            <span><a href="pages/produit.php?CodeProd=<?=$produit->CodeProd;?>"><img src="images/produits/<?= $produit->CodeProd; ?>.jpg" alt="un jeux" width="100%"></a></span>
+            <span><a href="produit.php?CodeProd=<?=$produit->CodeProd;?>"><img src="../images/produits/<?= $produit->CodeProd; ?>.jpg" alt="un jeux" width="100%"></a></span>
             <div class="card-img-overlay">
-                <h5 class="card-title"><a href="pages/produit.php?CodeProd=<?=$produit->CodeProd;?>"><?= $produit->NomProd; ?></a></h5>
+                <h5 class="card-title"><a href="produit.php?CodeProd=<?=$produit->CodeProd;?>"><?= $produit->NomProd; ?></a></h5>
                 <span><?= number_format($produit->Prix,2,',',' '); ?>€</span> <br>
 
                 <br>
 
-                <a href="pages/addpanier.php?CodeProd=<?= $produit->CodeProd; ?>" class="btn btn-success">
+                <a href="addpanier.php?CodeProd=<?= $produit->CodeProd; ?>" class="btn btn-success">
                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M8.5 5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 .5-.5z"/>
                         <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0v-2z"/>
@@ -30,31 +30,25 @@
     <?php endforeach; ?>
 
     <!-- REQUETE SQL -->
-    <?php $produits = $DB->query('SELECT * FROM produits WHERE CodeProd BETWEEN 1 AND 10'); ?>
+    <?php $produits = $DB->query("SELECT * FROM `produits` WHERE `categorie` = 'course'"); ?>
 
     <div class="card">
         <div class="card-header">
             <ul class="nav nav-pills card-header-pills">
                 <li class="nav-item">
-                    <a href="#" id="actif" class="nav-link active">En Vedette</a>
+                    <a href="../index.php" class="nav-link">En Vedette</a>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/action.php" class="nav-link">Action</a>
+                    <a href="action.php" class="nav-link">Action</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">Aventure</a>
+                    <a href="aventure.php" class="nav-link">Aventure</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">Course</a>
+                    <a href="course.php" id="actif" class="nav-link active">Course</a>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/fps.php" class="nav-link">FPS</a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/creatif.php" class="nav-link">Créatif</a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/rpg.php" class="nav-link">RPG</a>
+                    <a href="fps.php" class="nav-link">FPS</a>
                 </li>
             </ul>
         </div>
@@ -63,16 +57,16 @@
                 <?php foreach ($produits as $produit): ?>
                     <div class="col mb-5 rounded">
                         <div class ="card produit" style="width: 18rem;">
-                            <span><a href="pages/produit.php?CodeProd=<?=$produit->CodeProd;?>"><img src="images/produits/<?= $produit->CodeProd; ?>.jpg" alt="un jeux" width="100%"></a></span>
+                            <span><a href="produit.php?CodeProd=<?=$produit->CodeProd;?>"><img src="../images/produits/<?= $produit->CodeProd; ?>.jpg" alt="un jeux" width="100%"></a></span>
         
                             <div class="card-body">
                                 <span>-30%</span>
-                                <h5 class="card-title"><a href="pages/produit.php?CodeProd=<?=$produit->CodeProd;?>"><?= $produit->NomProd; ?></a></h5>
+                                <h5 class="card-title"><a href="produit.php?CodeProd=<?=$produit->CodeProd;?>"><?= $produit->NomProd; ?></a></h5>
                                 <span style="text-decoration: line-through;"><?= number_format($produit->Prix,2,',',' '); ?>€</span> <br>
                                 <span class="text-deco"><?php $pourcentage = 30; echo $produit->Prix - ($produit->Prix * ($pourcentage/100));?> €</span>
                                 <br>
         
-                                <a href="pages/addpanier.php?CodeProd=<?= $produit->CodeProd; ?>" class="btn btn-success">
+                                <a href="addpanier.php?CodeProd=<?= $produit->CodeProd; ?>" class="btn btn-success">
                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" d="M8.5 5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 .5-.5z"/>
                                         <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0v-2z"/>
@@ -89,21 +83,20 @@
     </div>
 
 
+    <?php $produits = $DB->query('SELECT * FROM produits WHERE CodeProd BETWEEN 1 AND 20'); ?>
     <h2 class="title-precommandes">Précommandes</h2>
+
     <?php foreach ($produits as $produit): ?>
         <div class="precommandes card mb-3 rounded" style="max-width: 50%;">
-
-            <?php $produits = $DB->query('SELECT * FROM produits WHERE CodeProd BETWEEN 1 AND 20'); ?>
-
             <div class="row no-gutters">
                 <div class="col-md-4">
-                    <span><a href="pages/produit.php?CodeProd=<?=$produit->CodeProd;?>"><img src="images/produits/<?= $produit->CodeProd; ?>.jpg" alt="un jeux" class="card-img"></a></span>
+                    <span><a href="produit.php?CodeProd=<?=$produit->CodeProd;?>"><img src="../images/produits/<?= $produit->CodeProd; ?>.jpg" alt="un jeux" class="card-img"></a></span>
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <a href="pages/produit.php?CodeProd=<?=$produit->CodeProd;?>"><h3 class="card-title"><?= $produit->NomProd; ?></h3></a>
+                        <a href="produit.php?CodeProd=<?=$produit->CodeProd;?>"><h3 class="card-title"><?= $produit->NomProd; ?></h3></a>
                         <span class="card-text"><?= number_format($produit->Prix,2,',',' '); ?>€</span> <br>
-                        <a href="pages/addpanier.php?CodeProd=<?= $produit->CodeProd; ?>" class="btn btn-success">Ajouter au panier</a>
+                        <a href="addpanier.php?CodeProd=<?= $produit->CodeProd; ?>" class="btn btn-success">Ajouter au panier</a>
                     </div>
                 </div>
             </div>
@@ -111,4 +104,4 @@
     <?php endforeach; ?>
 </div>
 
-<?php require 'pages/footer.php'; ?>
+<?php require 'footer.php'; ?>

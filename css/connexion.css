@@ -1,0 +1,22 @@
+.container {
+  margin-top: 15%;
+}
+h1, p {
+  color: #f6b93b;
+}
+#startchange {
+  background-color: black;
+}
+a {
+  color: #fff;
+}
+a:hover {
+  color: #fff;
+}
+.alerte {
+  background-color: #eb2f06;
+  width: 83%;
+}
+.alerte p{
+  color: #fff;
+}

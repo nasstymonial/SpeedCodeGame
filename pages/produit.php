@@ -21,7 +21,7 @@
 
                     <div class="logo-general">
                         <div class="logo">
-                            <img src="../images/logos/steam.png">
+                            <img src="../images/logos/logo_marque.png">
                         </div>
 
                         <div class="logo">
