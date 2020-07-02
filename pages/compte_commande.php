@@ -1,6 +1,6 @@
 <?php require 'header.php'; 
 
-echo "<link rel='stylesheet' type='text/css' href='../css/compte.css'>";
+echo "<link rel='stylesheet' type='text/css' href='../css/compte_commande.css'>";
 
 if(!isset($_SESSION['auth'])){
     $_SESSION['danger'] = "Vous devez vous connecter pour accéder à cet page"; 
