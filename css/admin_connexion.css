@@ -1,0 +1,9 @@
+.alerte {
+    padding: 0.2%;
+    background-color: #eb2f06;
+    width: 83%;
+    margin-bottom: 10px;
+  }
+  .alerte p{
+    color: #fff;
+  }

@@ -2,6 +2,11 @@
      
      require_once '../inc/db.php';
  
+    if(!isset($_SESSION['auth'])){
+        $_SESSION['danger'] = "Vous devez vous connecter pour accéder à cet page"; 
+        header('Location: admin_connexion.php'); 
+        exit(); 
+    }
     $nameError = $descriptionError = $priceError = $categoryError = $name = $description = $price = $category = "";
 
     if(!empty($_POST)) 

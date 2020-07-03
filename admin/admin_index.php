@@ -1,5 +1,11 @@
 <?php
     require '../pages/_header.php'; 
+
+    if(!isset($_SESSION['auth'])){
+        $_SESSION['danger'] = "Vous devez vous connecter pour accéder à cet page"; 
+        header('Location: admin_connexion.php'); 
+        exit(); 
+    }
 ?><!DOCTYPE html>
 <html>
     <head>

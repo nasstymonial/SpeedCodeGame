@@ -2,6 +2,12 @@
 
     require '../inc/db.php';
 
+    if(!isset($_SESSION['auth'])){
+        $_SESSION['danger'] = "Vous devez vous connecter pour accéder à cet page"; 
+        header('Location: admin_connexion.php'); 
+        exit(); 
+    }
+    
     if(!empty($_GET['id'])) 
     {
         $id = checkInput($_GET['id']);
