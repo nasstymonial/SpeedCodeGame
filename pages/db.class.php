@@ -1,10 +1,10 @@
 <?php 
 class DB{
 
-    private $host = 'localhost:3308';
-    private $username = 'nassim';
-    private $password = 'tjvbk1';
-    private $database = 'speedcodegame';
+    private $host = 'eu-cdbr-west-03.cleardb.net';
+    private $username = 'bd9b02415785c5';
+    private $password = '4d40357c';
+    private $database = 'heroku_415d890bad2fb94';
     private $db;
     
     public function __construct($host = null, $username = null, $password = null, $database = null){
