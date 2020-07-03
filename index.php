@@ -5,7 +5,7 @@
 
     <!-- REQUETE SQL -->
 
-    <?php $produits = $DB->query('SELECT * FROM produits WHERE CodeProd=5'); ?>
+    <?php $produits = $DB->query('SELECT * FROM produits WHERE CodeProd=17'); ?>
 
     <?php foreach ($produits as $produit): ?>
         <div class ="card w-100 bg-dark text-white vedette">
