@@ -69,10 +69,8 @@
                             <span><a href="produit.php?CodeProd=<?=$produit->CodeProd;?>"><img src="../images/produits/<?= $produit->CodeProd; ?>.jpg" alt="un jeux" width="100%"></a></span>
         
                             <div class="card-body">
-                                <span>-30%</span>
                                 <h5 class="card-title"><a href="produit.php?CodeProd=<?=$produit->CodeProd;?>"><?= $produit->NomProd; ?></a></h5>
-                                <span style="text-decoration: line-through;"><?= number_format($produit->Prix,2,',',' '); ?>€</span> <br>
-                                <span class="text-deco"><?php $pourcentage = 30; echo $produit->Prix - ($produit->Prix * ($pourcentage/100));?> €</span>
+                                <span><?= number_format($produit->Prix,2,',',' '); ?>€</span> <br>
                                 <br>
         
                                 <a href="addpanier.php?CodeProd=<?= $produit->CodeProd; ?>" class="btn btn-success" id="addPanier">
