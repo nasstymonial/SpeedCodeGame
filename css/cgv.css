@@ -1,0 +1,17 @@
+.titre{
+    margin-top : 150px;
+    color: rgb(255, 255, 255);
+    margin-bottom : 40px;
+    text-align: center;
+}
+
+h1, h2, p{
+    width: 80%;
+    margin: auto;
+}
+
+p{
+    color: rgb(255, 255, 255);
+    margin-bottom : 20px;
+    text-align: justify;
+}

@@ -31,13 +31,13 @@
                 <div class="col-6 col-md"> 
                     <ul class = "list-unstyled text-small">
                         <li>
-                            <a class="text-muted" href = "termesEtConditions.html"> <span>Termes et Conditions</span></a>
+                            <a class="text-muted" href = "pages/cgv.php"> <span>Termes et Conditions</span></a>
                         </li>
                         <li>
                             <a class="text-muted" href = "AccordServiceAchats.html"> <span>Accord relatif aux services d'achat</span></a>
                         </li>
                         <li>
-                            <a class="text-muted" href = "politiqueDeConfidentialité.html"> <span>Politique de confidentialité</span></a>
+                            <a class="text-muted" href = "pages/politique_de_confidentialite.php"> <span>Politique de confidentialité</span></a>
                         </li>
                         <li>
                             <a class="text-muted" href = "CommissionsEtFrais.html"> <span>Commissions et frais</span></a>

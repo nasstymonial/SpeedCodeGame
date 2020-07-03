@@ -1,7 +1,10 @@
 <?php 
     require_once 'header.php'; 
+
+    echo "<link rel='stylesheet' type='text/css' href='../css/cgv.css'>";
 ?>
-    <h1>CONDITIONS GÉNÉRALES DE VENTE ET D’UTILISATION </h1>
+
+<h1 class="titre">CONDITIONS GÉNÉRALES DE VENTE ET D’UTILISATION </h1>
 
 
 <h2>VUE D’ENSEMBLE</h2>

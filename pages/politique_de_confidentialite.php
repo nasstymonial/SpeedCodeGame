@@ -1,8 +1,10 @@
 <?php 
     require_once 'header.php'; 
+
+    echo "<link rel='stylesheet' type='text/css' href='../css/cgv.css'>";
 ?>
 
-    <h1>DÉCLARATION DE CONFIDENTIALITÉ</h1>
+    <h1 class="titre">DÉCLARATION DE CONFIDENTIALITÉ</h1>
 
 
 <h2>ARTICLE 1 – RENSEIGNEMENTS PERSONNELS RECUEILLIS</h2>
