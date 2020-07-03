@@ -2,6 +2,13 @@
 echo "<link rel='stylesheet' type='text/css' href='../css/panier.css'>";
 require_once '../inc/db.php'; 
 
+
+if(!isset($_SESSION['auth'])){
+    $_SESSION['danger'] = "Vous devez vous connecter pour accéder à cet page"; 
+    header('Location: connexion.php'); 
+    exit(); 
+}
+
 // inscription de l'utilisateur avec les requêtes preparé
 if (!empty($_POST)){
     $req=$pdo->prepare('INSERT INTO commandes(date_commande, total, id_user)
