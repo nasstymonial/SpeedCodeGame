@@ -1,5 +1,6 @@
 <?php
     require_once '../inc/db.php'; 
+    
     session_start(); 
     if(!empty($_GET['id'])) 
     {
@@ -11,13 +12,13 @@
         header('Location: admin_connexion.php'); 
         exit(); 
     }
-
+    
     if(!empty($_POST)) 
     {
         $id = checkInput($_POST['id']);
-        $statement = $pdo->prepare("DELETE FROM produits WHERE CodeProd = ?");
+        $statement = $pdo->prepare("DELETE FROM commandes WHERE id = ?");
         $statement->execute(array($id));
-        header("Location: admin_index.php"); 
+        header("Location: admin_commandes.php"); 
     }
 
     function checkInput($data) 
@@ -45,9 +46,9 @@
     <body>
          <div class="container admin">
             <div class="row">
-                <h1><strong>Supprimer un Produit</strong></h1>
+                <h1><strong>Supprimer une commande</strong></h1>
                 <br>
-                <form class="form" action="supprimer.php" role="form" method="post">
+                <form class="form" action="supprimer_commandes.php" role="form" method="post">
                     <input type="hidden" name="id" value="<?php echo $id;?>"/>
                     <p class="alert alert-danger">Etes vous sur de vouloir supprimer ?</p>
                     <div class="form-actions">

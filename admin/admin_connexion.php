@@ -61,6 +61,8 @@ if(!empty($_POST) && !empty($_POST['username'] && !empty($_POST['motdepasse'])))
                         <button type="submit" name="login" class="btn btn-success">Se connecter</button>
                         </div>
                     </div>
+
+                    <a href="../index.php">Retour sur le site</a>
                 </form>
             </div>
         </div>

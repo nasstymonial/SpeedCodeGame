@@ -2,6 +2,7 @@
      
      require_once '../inc/db.php';
  
+    session_start(); 
     if(!isset($_SESSION['auth'])){
         $_SESSION['danger'] = "Vous devez vous connecter pour accéder à cet page"; 
         header('Location: admin_connexion.php'); 

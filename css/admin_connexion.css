@@ -3,7 +3,10 @@
     background-color: #eb2f06;
     width: 83%;
     margin-bottom: 10px;
-  }
-  .alerte p{
-    color: #fff;
-  }
+}
+.alerte p{
+  color: #fff;
+}
+.container {
+    margin-top: 15%;
+}
