@@ -3,6 +3,8 @@
     require_once '../inc/db.php'; 
 
     echo "<link rel='stylesheet' type='text/css' href='../css/produit.css'>";
+    echo "<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js' integrity='sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI' crossorigin='anonymous'></script>";
+    
     if(isset($_GET['CodeProd']))  {
         $produits = $pdo->prepare('SELECT * FROM produits WHERE CodeProd = ?');
         $produits->execute(array($_GET['CodeProd']));
