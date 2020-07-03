@@ -58,3 +58,8 @@ h2 {
 h5 a {
     color: #000;
 }
+.vedette img {
+
+    filter: brightness(50%);
+    
+}

@@ -9,7 +9,7 @@
 
     <?php foreach ($produits as $produit): ?>
         <div class ="card w-100 bg-dark text-white vedette">
-            <span><a href="pages/produit.php?CodeProd=<?=$produit->CodeProd;?>"><img src="images/produits/<?= $produit->CodeProd; ?>.jpg" alt="un jeux" width="100%"></a></span>
+            <span><a href="pages/produit.php?CodeProd=<?=$produit->CodeProd;?>"><img src="images/produits/<?= $produit->CodeProd; ?>.jpg" alt="un jeux" width="100%" style="color: linear-gradient(rgba(0, 0, 255, 0.5);"></a></span>
             <div class="card-img-overlay">
                 <h5 class="card-title"><a href="pages/produit.php?CodeProd=<?=$produit->CodeProd;?>"><?= $produit->NomProd; ?></a></h5>
                 <span><?= number_format($produit->Prix,2,',',' '); ?>€</span> <br>
