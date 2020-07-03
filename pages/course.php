@@ -5,7 +5,7 @@
 
     <!-- REQUETE SQL -->
 
-    <?php $produits = $DB->query('SELECT * FROM produits WHERE CodeProd=5'); ?>
+    <?php $produits = $DB->query('SELECT * FROM produits WHERE CodeProd=17'); ?>
 
     <?php foreach ($produits as $produit): ?>
         <div class ="card w-100 bg-dark text-white vedette">
@@ -48,6 +48,12 @@
                     <a href="course.php" id="actif" class="nav-link active">Course</a>
                 </li>
                 <li class="nav-item">
+                    <a href="creatif.php" class="nav-link">Créatif</a>
+                </li>
+                <li class="nav-item">
+                    <a href="rpg.php" class="nav-link">RPG</a>
+                </li>
+                <li class="nav-item">
                     <a href="fps.php" class="nav-link">FPS</a>
                 </li>
             </ul>
@@ -55,7 +61,7 @@
         <div class="card-body">
             <div class="row mt-5 ml-5 mr-3 row-cols-1 row-cols-md-5">
                 <?php foreach ($produits as $produit): ?>
-                    <div class="col mb-5 rounded">
+                    <div class="d-flex col mb-5 rounded">
                         <div class ="card produit" style="width: 18rem;">
                             <span><a href="produit.php?CodeProd=<?=$produit->CodeProd;?>"><img src="../images/produits/<?= $produit->CodeProd; ?>.jpg" alt="un jeux" width="100%"></a></span>
         
