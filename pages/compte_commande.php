@@ -53,24 +53,25 @@ if(!empty($_POST)){
     </div>
 
     <div class="contenu-menu">
-        <h3>Informations Personnelles</h3>
-        <hr />
-        <div class="mail">
-            <form method ="POST" action="" class ="f-mail">
-                <h4>E-mail</h4>
-                <p><?php echo $_SESSION['auth']->email ?></p>
-                <input type="email" name="email" id="email"/>
-                <button type="submit" class="bouton_modif"> Modifier</button>
-            </form>
-        </div>
+        <h3>Mes derniéres commandes</h3>
 
-        <div class="mot-de-passe">
-            <form method ="POST" action="" class ="f-mot-de-passe">
-                <h4>Mot de passe</h4>
-                <input type="password" name="mdp" id="mdp"/>
-                <button type="submit" class="bouton_modif">Modifier</button>
-            </form>
-        </div>
+        <?php
+        $user_id = $_SESSION['auth']->id;
+        $commandes = $DB->query("SELECT * FROM commandes WHERE id_user= '{$user_id}'"); ?>
+
+        <table class="table table-striped table-bordered">
+        <?php foreach ($commandes as $commande): ?>
+            <tbody>
+                <tr>
+                    <td>Commande du <?= $commande->date_commande ?></td>
+                    <td><?= $commande->total ?> €</td>
+                    <td><?= $commande->etat ?></td>
+                </tr>
+            </tbody>
+        <?php endforeach; ?>
+        </table>
+        <hr />
+
     </div>
 
 </div>

@@ -1,5 +1,19 @@
 <?php require 'header.php'; 
 echo "<link rel='stylesheet' type='text/css' href='../css/panier.css'>";
+require_once '../inc/db.php'; 
+
+// inscription de l'utilisateur avec les requêtes preparé
+if (!empty($_POST)){
+    $req=$pdo->prepare('INSERT INTO commandes(date_commande, total, id_user)
+        VALUES (now(), :total, :id_user)');
+    $arr = array(
+        'total' => $panier->total(),
+        'id_user' => $_SESSION['auth']->id
+    );
+    $req->execute($arr);
+    header('location: success.php');   
+}
+
 ?>
 
 <div class="container">
@@ -32,9 +46,13 @@ echo "<link rel='stylesheet' type='text/css' href='../css/panier.css'>";
 
 		<h4 style="margin-top: 40px;margin-bottom: 40px;">Total à payer : <span class="total"><?= $panier->total(); ?>€</span></h4>
 
+        <input type="hidden" name="id_user" value="<?= $_SESSION['auth']->id; ?>">
+
+
+        <input type="submit" value="Procéder au paiement" class="btn btn-success" style="width:100%;padding:8px;font-size:16px;"><br>	
+
 	</form>
 
-    <a href="#"><input type="submit" value="Procéder au paiement" class="btn btn-success" style="width:100%;padding:8px;font-size:16px;"></a><br>	
     <a href="../index.php"><input type="button" value="Continuer à faire des achats" class="btn btn-warning" style="width:100%;padding:8px;font-size:16px;"></a>
 	
 	
